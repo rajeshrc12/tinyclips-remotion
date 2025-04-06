@@ -1,4 +1,6 @@
-import { useCurrentFrame, useVideoConfig, Img, interpolate, spring, Audio, staticFile } from "remotion";
+import { useCurrentFrame, useVideoConfig, Img, interpolate, spring, Audio } from "remotion";
+import { loadFont } from "@remotion/google-fonts/LuckiestGuy";
+const { fontFamily } = loadFont();
 
 interface Subtitle {
   start: number;
@@ -109,14 +111,14 @@ export const MyComp: React.FC<MyCompProps> = ({ subtitleWithImageIndex, subtitle
               transform: `translate(-50%, -50%) scale(${subtitleScale})`,
               opacity,
               color: "white",
-              fontSize: "70px",
-              fontWeight: 900,
+              fontSize: "60px",
               textShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)",
               textAlign: "center",
               whiteSpace: "pre-wrap",
               padding: "0 40px",
-              WebkitTextStroke: "1px black",
+              WebkitTextStroke: "3px black",
               WebkitTextFillColor: "white", // to ensure stroke + fill works well together
+              fontFamily 
             }}
           >
             {s.word}

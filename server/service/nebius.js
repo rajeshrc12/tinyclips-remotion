@@ -65,10 +65,10 @@ export const generateImage = async (prompt) => {
     const response = await client.images.generate({
       model: "black-forest-labs/flux-schnell",
       response_format: "url",
+      width: 576,
+      height: 1024,
       extra_body: {
         response_extension: "png",
-        width: 576,
-        height: 1024,
         num_inference_steps: 4,
         negative_prompt: "Distorted body, extra limbs, missing fingers, deformed face, incorrect spelling, gibberish text, extra fingers, disembodied head.",
         seed: -1,

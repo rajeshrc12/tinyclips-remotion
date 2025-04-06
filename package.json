@@ -9,6 +9,7 @@
   "dependencies": {
     "@deepgram/sdk": "^3.11.3",
     "@remotion/cli": "^4.0.286",
+    "@remotion/google-fonts": "^4.0.286",
     "@remotion/renderer": "^4.0.286",
     "assemblyai": "^4.9.0",
     "axios": "^1.8.4",

@@ -1,0 +1,24 @@
+# Ignore node modules (will be reinstalled inside Docker)
+node_modules
+
+# Ignore local builds
+dist
+build
+out
+
+# Git and system files
+.git
+.gitignore
+.DS_Store
+
+# IDE
+.vscode
+.idea
+
+# Logs and temp
+*.log
+*.mp4
+*.mov
+*.webm
+.env
+.env.*

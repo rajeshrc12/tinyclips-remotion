@@ -1,0 +1,27 @@
+{
+  "name": "tinyclips-remotion",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@deepgram/sdk": "^3.11.3",
+    "@remotion/cli": "^4.0.286",
+    "@remotion/renderer": "^4.0.286",
+    "assemblyai": "^4.9.0",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "openai": "^4.91.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "typescript": "^5.8.3"
+  }
+}

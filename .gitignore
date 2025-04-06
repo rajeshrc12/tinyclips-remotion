@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Output
+dist/
+build/
+out/
+*.wav
+*.mp4
+*.mov
+*.webm
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+.env
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Editor folders
+.vscode/
+.idea/

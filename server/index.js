@@ -16,7 +16,7 @@ app.use("/tmp", express.static("/tmp"));
 const port = process.env.PORT || 3000;
 
 app.post("/render", async (req, res) => {
-  const { script, voiceName, languageCode } = req.body;
+  const { script, voiceName, languageCode,imageStyle } = req.body;
   const outputPath = `./videos/output-${Date.now()}.mp4`;
 
   try {
@@ -29,7 +29,6 @@ app.post("/render", async (req, res) => {
     const subtitlesTimeSeries = splitTimeSeries(subtitle.sentences);
     const subtitleWithImageIndex = getSubtitleWithImageIndex(subtitlesTimeSeries);
     const imagePrompts = [];
-    const imageStyle = "Hyper-realistic";
     const promptPromises = subtitlesTimeSeries.map((subtitle) => createImagePrompts(script, subtitle.word, subtitle.series.length, imageStyle));
     const allPrompts = await Promise.all(promptPromises);
     allPrompts.forEach((prompt) => imagePrompts.push(...prompt));
